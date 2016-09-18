@@ -1,0 +1,36 @@
+.container {
+  display: inline-block;
+}
+
+.input {
+  font-size: 14px;
+  color: rgba(0, 0, 0, .87);
+  border: none;
+  border-bottom: #C9C6C6 solid 1px;
+  line-height: 24px;
+  &:focus {
+    outline: 0;
+    border-bottom: #333333 solid 2px;
+  }
+  &::placeholder {
+    color: #C9C6C6;
+  }
+}
+
+.error-container {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  color: #F44336;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.error-text {
+  flex-grow: 1;
+}
+
+.error-icon {
+  flex-basis: 20px;
+  flex-shrink: 0;
+}

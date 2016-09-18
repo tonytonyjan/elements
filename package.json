@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^3.10.0",
+    "react-icons": "^2.2.1",
     "sass-loader": "^4.0.2"
   },
   "dependencies": {
