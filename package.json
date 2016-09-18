@@ -10,11 +10,11 @@
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^3.10.0",
-    "react-icons": "^2.2.1",
-    "sass-loader": "^4.0.2"
+    "sass-loader": "^4.0.2",
+    "@kadira/storybook": "^2.14.0"
   },
   "dependencies": {
-    "@kadira/storybook": "^2.14.0",
+    "react-icons": "^2.2.1",
     "react": "^15.3.1"
   }
 }
