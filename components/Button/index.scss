@@ -1,0 +1,28 @@
+@mixin button($color, $hover-color) {
+  background-color: $color;
+  border: none;
+  border-radius: 2px;
+  font-weight: normal;
+  padding: 10px 14px;
+  font-size: 16px;
+  color: white;
+  line-height: 16px;
+  cursor: pointer;
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    background-color: $hover-color;
+  }
+  &:active {
+    background-color: $color;
+  }
+}
+
+.red {
+  @include button(#EE2E24, #C41F17);
+}
+
+.gray {
+  @include button(#C9C6C6, #979797);
+}

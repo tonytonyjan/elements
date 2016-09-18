@@ -1,0 +1,19 @@
+{
+  "name": "ziltag-elements",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  },
+  "author": "Ziltag Inc.",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^3.10.0",
+    "sass-loader": "^4.0.2"
+  },
+  "dependencies": {
+    "@kadira/storybook": "^2.14.0",
+    "react": "^15.3.1"
+  }
+}
