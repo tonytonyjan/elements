@@ -13,5 +13,5 @@ storiesOf('TextField', module)
     <TextField placeholder="Hint text" width='100%'/>
   ))
   .add('With Error', () => (
-    <TextField width={200} error="Username or Password is incorrect." placeholder="Hint text"/>
+    <TextField width={240} error="Username or Password is incorrect." placeholder="Hint text"/>
   ))
