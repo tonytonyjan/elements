@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react'
-import './index.css'
 
-export default props => {
+if(typeof window !== 'undefined') require('./index.css')
+
+module.exports = props => {
   const {text, color, width, ...others} = props
   let className = 'z-button'
   if(color == 'gray') className += ' z-button--gray'

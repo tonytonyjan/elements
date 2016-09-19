@@ -9,9 +9,11 @@
   "author": "Ziltag Inc.",
   "license": "ISC",
   "devDependencies": {
+    "@kadira/storybook": "^2.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-2": "^6.13.0",
     "node-sass": "^3.10.0",
-    "sass-loader": "^4.0.2",
-    "@kadira/storybook": "^2.14.0"
+    "sass-loader": "^4.0.2"
   },
   "dependencies": {
     "react-icons": "^2.2.1",
