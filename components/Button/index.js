@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react'
-import styles from './index.scss'
+import './index.css'
 
 export default props => {
-  const {text, color, width} = props
-  return (
-    <button style={{width}} className={styles[color || 'red']}>{text}</button>
-  )
+  const {text, color, width, ...others} = props
+  let className = 'z-button'
+  if(color == 'gray') className += ' z-button--gray'
+  return <button style={{width}} className={className} {...others}>{text}</button>
 }
