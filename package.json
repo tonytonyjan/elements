@@ -2,14 +2,16 @@
   "name": "ziltag-elements",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "components/index.js",
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build": "babel --presets='es2015,stage-2,react' -d dist --ignore '**/story.js' components"
   },
   "author": "Ziltag Inc.",
   "license": "ISC",
   "devDependencies": {
     "@kadira/storybook": "^2.14.0",
+    "babel-cli": "^6.14.0",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-stage-2": "^6.13.0",
     "node-sass": "^3.10.0",
