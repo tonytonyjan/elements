@@ -1,0 +1,37 @@
+.z-text-field {
+  display: inline-block;
+}
+
+.z-text-field__input {
+  font-size: 14px;
+  color: rgba(0, 0, 0, .87);
+  border: none;
+  border-bottom: #C9C6C6 solid 1px;
+  line-height: 24px;
+}
+
+.z-text-field__input:focus {
+  outline: 0;
+  border-bottom: #333333 solid 2px;
+}
+.z-text-field__input::placeholder {
+  color: #C9C6C6;
+}
+
+.z-text-field__error {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  color: #F44336;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.z-text-field__error-text {
+  flex-grow: 1;
+}
+
+.z-text-field__error-icon {
+  flex-basis: 20px;
+  flex-shrink: 0;
+}

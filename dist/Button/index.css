@@ -1,0 +1,35 @@
+.z-button {
+  background-color: #EE2E24;
+  border: none;
+  border-radius: 2px;
+  font-weight: normal;
+  padding: 10px 14px;
+  font-size: 16px;
+  color: white;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.z-button:focus {
+  outline: 0;
+}
+
+.z-button:hover {
+  background-color: #C41F17;
+}
+
+.z-button:active {
+  background-color: #EE2E24;
+}
+
+.z-button--gray {
+  background-color: #C9C6C6;
+}
+
+.z-button--gray:hover {
+  background-color: #979797;
+}
+
+.z-button--gray:active {
+  background-color: #C9C6C6;
+}

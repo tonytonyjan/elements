@@ -2,10 +2,12 @@
   "name": "ziltag-elements",
   "version": "1.0.0",
   "description": "",
-  "main": "components/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "build": "babel --presets='es2015,stage-2,react' -d dist --ignore '**/story.js' components"
+    "clean": "rm -rf dist",
+    "build": "npm run clean && babel --presets='es2015,stage-2,react' -d dist --ignore '**/story.js' components && npm run copy_css",
+    "copy_css": "rsync -av --include='*.css' --include='*/' --exclude='*' components/ dist"
   },
   "author": "Ziltag Inc.",
   "license": "ISC",
