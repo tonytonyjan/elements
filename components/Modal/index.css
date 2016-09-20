@@ -1,0 +1,38 @@
+.z-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .82);
+}
+
+.z-modal__body {
+  position: relative;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 40px 120px;
+  max-width: 621px;
+  max-height: 66vh;
+  margin: 0 auto;
+  top: 130px;
+  overflow: scroll;
+}
+
+.z-modal__close {
+  position: absolute;
+  right: 11.6px;
+  top: 11.6px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 621px) {
+  .z-modal__body {
+    position: absolute;
+    padding: 10px 20px;
+    max-height: 100vh;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+  }
+}
