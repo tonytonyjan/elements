@@ -1,4 +1,5 @@
 .z-ziltag {
+  position: absolute;
   width: 16px;
   height: 16px;
   background: #EE2E24;
@@ -14,8 +15,8 @@
   width: 38px;
   height: 38px;
   position: absolute;
-  top: -3px;
-  left: -3px;
+  top: -12px;
+  left: -12px;
   border-radius: 50%;
   background: rgba(239, 146, 140, .71);
   box-sizing: content-box;
