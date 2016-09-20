@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "start-storybook -p 9001",
+    "storybook:build": "build-storybook",
     "clean": "rm -rf dist",
     "build": "npm run clean && babel --presets='es2015,stage-2,react' -d dist --ignore '**/story.js' components && npm run copy_css",
     "copy_css": "rsync -av --include='*.css' --include='*/' --exclude='*' components/ dist",
