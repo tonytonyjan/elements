@@ -18,9 +18,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-if (typeof window !== 'undefined') require('./index.css');
+if (typeof window !== 'undefined') {
+  require('./index.css');
+}
 
-exports.default = function (props) {
+var TextField = function TextField(props) {
   var error = props.error;
   var width = props.width;
 
@@ -46,3 +48,10 @@ exports.default = function (props) {
     )
   );
 };
+
+TextField.propTypes = {
+  error: _react.PropTypes.string,
+  width: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number])
+};
+
+exports.default = TextField;

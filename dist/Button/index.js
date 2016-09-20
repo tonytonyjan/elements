@@ -14,9 +14,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-if (typeof window !== 'undefined') require('./index.css');
+if (typeof window !== 'undefined') {
+  require('./index.css');
+}
 
-exports.default = function (props) {
+var Button = function Button(props) {
   var text = props.text;
   var color = props.color;
   var width = props.width;
@@ -24,10 +26,20 @@ exports.default = function (props) {
   var others = _objectWithoutProperties(props, ['text', 'color', 'width']);
 
   var className = 'z-button';
-  if (color == 'gray') className += ' z-button--gray';
+  if (color === 'gray') {
+    className += ' z-button--gray';
+  }
   return _react2.default.createElement(
     'button',
     _extends({ style: { width: width }, className: className }, others),
     text
   );
 };
+
+Button.propTypes = {
+  text: _react.PropTypes.string,
+  color: _react.PropTypes.string,
+  width: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number])
+};
+
+exports.default = Button;
