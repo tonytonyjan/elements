@@ -1,5 +1,9 @@
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -8,6 +12,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 if (typeof window !== 'undefined') require('./index.css');
 
-module.exports = function (props) {
+exports.default = function (props) {
   return _react2.default.createElement('div', { className: 'z-ziltag', style: props.style });
 };
