@@ -35,5 +35,11 @@ npm run storybook
 Remember to build before push:
 
 ```
-npm run build && git -am 'test' && git push
+npm run build && git add dist && git ci -m 'build' && git push
+```
+
+or
+
+```
+npm run release
 ```

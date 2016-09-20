@@ -7,7 +7,8 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "clean": "rm -rf dist",
     "build": "npm run clean && babel --presets='es2015,stage-2,react' -d dist --ignore '**/story.js' components && npm run copy_css",
-    "copy_css": "rsync -av --include='*.css' --include='*/' --exclude='*' components/ dist"
+    "copy_css": "rsync -av --include='*.css' --include='*/' --exclude='*' components/ dist",
+    "release": "npm run build && git add dist && git ci -m 'build' && git push"
   },
   "author": "Ziltag Inc.",
   "license": "ISC",
