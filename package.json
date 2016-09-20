@@ -8,7 +8,8 @@
     "clean": "rm -rf dist",
     "build": "npm run clean && babel --presets='es2015,stage-2,react' -d dist --ignore '**/story.js' components && npm run copy_css",
     "copy_css": "rsync -av --include='*.css' --include='*/' --exclude='*' components/ dist",
-    "release": "npm run build && git add dist && git ci -m 'build' && git push"
+    "release": "npm run build && git add dist && git ci -m 'build' && git push",
+    "test": "xo"
   },
   "author": "Ziltag Inc.",
   "license": "ISC",
@@ -18,10 +19,20 @@
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-stage-2": "^6.13.0",
     "node-sass": "^3.10.0",
-    "sass-loader": "^4.0.2"
+    "sass-loader": "^4.0.2",
+    "xo": "^0.16.0"
   },
   "dependencies": {
     "react-icons": "^2.2.1",
     "react": "^15.3.1"
+  },
+  "xo": {
+    "semicolon": false,
+    "extends": "xo-react",
+    "space": true,
+    "envs": ["browser", "node"],
+    "rules": {
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    }
   }
 }

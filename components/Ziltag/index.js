@@ -1,6 +1,15 @@
-import React from 'react'
-if(typeof window !== 'undefined') require('./index.css')
+import React, {PropTypes} from 'react'
 
-export default props => (
-  <div className="z-ziltag" style={props.style}></div>
+if (typeof window !== 'undefined') {
+  require('./index.css')
+}
+
+const Ziltag = props => (
+  <div className="z-ziltag" style={props.style}/>
 )
+
+Ziltag.propTypes = {
+  style: PropTypes.object
+}
+
+export default Ziltag

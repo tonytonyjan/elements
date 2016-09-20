@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf, action } from '@kadira/storybook'
+import {storiesOf, action} from '@kadira/storybook'
 import Button from '.'
 
 storiesOf('Button', module)
@@ -13,5 +13,5 @@ storiesOf('Button', module)
     <Button width={200} text="Fixed Width"/>
   ))
   .add('With Listener', () => (
-    <Button text="Add Listener" onClick={action('click')} />
+    <Button text="Add Listener" onClick={action('click')}/>
   ))
