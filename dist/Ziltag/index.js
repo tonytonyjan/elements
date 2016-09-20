@@ -8,6 +8,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 if (typeof window !== 'undefined') require('./index.css');
 
-module.exports = function () {
-  return _react2.default.createElement('div', { className: 'z-ziltag' });
+module.exports = function (props) {
+  return _react2.default.createElement('div', { className: 'z-ziltag', style: props.style });
 };
