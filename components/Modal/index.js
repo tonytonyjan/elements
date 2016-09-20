@@ -7,12 +7,12 @@ if (typeof window !== 'undefined') {
 
 const Model = props => (
   props.isOpen &&
-  <div className="z-modal" onClick={props.onRequestClose}>
-    <div className="z-modal__body" onClick={e=>e.stopPropagation()}>
-      {props.children}
-      <Close className="z-modal__close" size={40} onClick={props.onRequestClose} />
+    <div className="z-modal" onClick={props.onRequestClose}>
+      <div className="z-modal__body" onClick={stopPropagation}>
+        {props.children}
+        <Close className="z-modal__close" size={40} onClick={props.onRequestClose}/>
+      </div>
     </div>
-  </div>
 )
 
 Model.propTypes = {
@@ -23,6 +23,10 @@ Model.propTypes = {
 
 Model.defaultProps = {
   isOpen: false
+}
+
+function stopPropagation(e) {
+  e.stopPropagation()
 }
 
 export default Model
