@@ -10,7 +10,7 @@
     "build": "npm run clean && babel --presets='es2015,stage-2,react' -d dist --ignore '**/story.js' components && npm run copy_css",
     "copy_css": "rsync -av --include='*.css' --include='*/' --exclude='*' components/ dist",
     "release": "npm run build && git add dist && git ci -m 'build' && git push",
-    "deploy": "GIT_DEPLOY_DIR=storybook-static GIT_DEPLOY_BRANCH=gh-pages GIT_DEPLOY_REPO=git@github.com:ziltag/elements.git bin/deploy",
+    "deploy": "rm -rf build-storybook && npm run storybook:build && GIT_DEPLOY_DIR=storybook-static GIT_DEPLOY_BRANCH=gh-pages GIT_DEPLOY_REPO=git@github.com:ziltag/elements.git bin/deploy",
     "test": "xo"
   },
   "author": "Ziltag Inc.",
