@@ -3,7 +3,7 @@ import Warning from 'react-icons/lib/md/warning'
 
 if(typeof window !== 'undefined') require('./index.css')
 
-module.exports = props => {
+export default props => {
   const {error, width, ...others} = props
   const inputStyle = {
     width: width || 150,
