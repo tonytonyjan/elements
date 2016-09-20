@@ -43,3 +43,9 @@ or
 ```
 npm run release
 ```
+
+## Deploy to gh-pages
+
+```
+npm run deploy
+```
