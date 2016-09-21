@@ -1,2 +1,5 @@
 export {default as Button} from './Button'
+export {default as Madal} from './Madal'
+export {default as Spinner} from './Spinner'
 export {default as TextField} from './TextField'
+export {default as Ziltag} from './Ziltag'
