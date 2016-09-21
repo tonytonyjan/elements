@@ -19,14 +19,12 @@ if (typeof window !== 'undefined') {
 }
 
 var Model = function Model(props) {
-  return _react2.default.createElement(
+  return props.isOpen && _react2.default.createElement(
     'div',
-    { className: 'z-modal', onClick: props.onRequestClose, style: { display: !props.isOpen && 'none' } },
+    { className: 'z-modal', onClick: props.onRequestClose },
     _react2.default.createElement(
       'div',
-      { className: 'z-modal__body', onClick: function onClick(e) {
-          return e.stopPropagation();
-        } },
+      { className: 'z-modal__body', onClick: stopPropagation },
       props.children,
       _react2.default.createElement(_close2.default, { className: 'z-modal__close', size: 40, onClick: props.onRequestClose })
     )
@@ -38,5 +36,13 @@ Model.propTypes = {
   children: _react.PropTypes.node,
   onRequestClose: _react.PropTypes.func
 };
+
+Model.defaultProps = {
+  isOpen: false
+};
+
+function stopPropagation(e) {
+  e.stopPropagation();
+}
 
 exports.default = Model;
