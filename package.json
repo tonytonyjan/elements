@@ -20,6 +20,7 @@
     "babel-cli": "^6.14.0",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-stage-2": "^6.13.0",
+    "eslint": "^3.5.0",
     "eslint-config-xo-react": "^0.9.0",
     "eslint-plugin-react": "^6.3.0",
     "xo": "^0.16.0"
@@ -32,7 +33,9 @@
     "semicolon": false,
     "extends": "xo-react",
     "space": true,
-    "ignores": ["storybook-static/**"],
+    "ignores": [
+      "storybook-static/**"
+    ],
     "envs": [
       "browser",
       "node"
