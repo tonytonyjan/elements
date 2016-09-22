@@ -15,7 +15,7 @@ const Button = props => {
 
 Button.propTypes = {
   text: PropTypes.string,
-  color: PropTypes.string,
+  color: PropTypes.oneOf(['gray']),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 }
 
