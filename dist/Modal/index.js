@@ -19,25 +19,36 @@ if (typeof window !== 'undefined') {
 }
 
 var Model = function Model(props) {
-  return props.isOpen && _react2.default.createElement(
+  var isOpen = props.isOpen;
+  var onRequestClose = props.onRequestClose;
+  var isCenterMode = props.isCenterMode;
+  var children = props.children;
+
+  var className = 'z-modal';
+  if (isCenterMode) {
+    className += ' z-modal--center';
+  }
+  return isOpen && _react2.default.createElement(
     'div',
-    { className: 'z-modal', onClick: props.onRequestClose },
+    { className: className, onClick: onRequestClose },
     _react2.default.createElement(
       'div',
       { className: 'z-modal__body', onClick: stopPropagation },
-      props.children,
-      _react2.default.createElement(_close2.default, { className: 'z-modal__close', size: 40, onClick: props.onRequestClose })
+      children,
+      _react2.default.createElement(_close2.default, { className: 'z-modal__close', size: 40, onClick: onRequestClose })
     )
   );
 };
 
 Model.propTypes = {
+  isCenterMode: _react.PropTypes.bool,
   isOpen: _react.PropTypes.bool,
   children: _react.PropTypes.node,
   onRequestClose: _react.PropTypes.func
 };
 
 Model.defaultProps = {
+  isCenterMode: false,
   isOpen: false
 };
 
