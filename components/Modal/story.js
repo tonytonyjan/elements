@@ -14,7 +14,7 @@ storiesOf('Modal', module)
     </Modal>
   ))
   .add('Video', () => (
-    <Modal isCenterMode isOpen onRequestClose={action('close')}>
+    <Modal mode="center" isOpen onRequestClose={action('close')}>
       <iframe width="100%" height="100%" style={{border: 'none'}} src="https://www.youtube-nocookie.com/embed/lPmIZy5B7-Y?rel=0&amp;showinfo=0" frameBorder="0" allowFullScreen/>
     </Modal>
   ))

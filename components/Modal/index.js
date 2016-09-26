@@ -6,9 +6,9 @@ if (typeof window !== 'undefined') {
 }
 
 const Model = props => {
-  const {isOpen, onRequestClose, isCenterMode, children} = props
+  const {isOpen, onRequestClose, mode, children} = props
   let className = 'z-modal'
-  if (isCenterMode) {
+  if (mode === 'center') {
     className += ' z-modal--center'
   }
   return (
@@ -23,14 +23,14 @@ const Model = props => {
 }
 
 Model.propTypes = {
-  isCenterMode: PropTypes.bool,
+  mode: React.PropTypes.oneOf(['normal', 'center']),
   isOpen: PropTypes.bool,
   children: PropTypes.node,
   onRequestClose: PropTypes.func
 }
 
 Model.defaultProps = {
-  isCenterMode: false,
+  mode: 'normal',
   isOpen: false
 }
 
