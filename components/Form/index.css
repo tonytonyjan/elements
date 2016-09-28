@@ -1,0 +1,33 @@
+.z-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.z-form__field:not(:first-child) {
+  margin-top: 30px;
+}
+
+.z-form__tip {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #979797;
+}
+
+.z-form__tip a {
+  color: #008BF3;
+  text-decoration: none;
+}
+
+.z-form__button {
+  margin-top: 28px;
+}
+
+.z-form__footer {
+  margin-top: 24px;
+  font-size: 12px;
+  color: #979797;
+}
+
+.z-form__footer a {
+  color: inherit;
+}

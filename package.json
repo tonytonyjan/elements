@@ -1,6 +1,6 @@
 {
   "name": "ziltag-elements",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -41,6 +41,7 @@
       "node"
     ],
     "rules": {
+      "react/jsx-key": 0,
       "react/jsx-filename-extension": [
         1,
         {
