@@ -21,11 +21,11 @@ if (typeof window !== 'undefined') {
 var Model = function Model(props) {
   var isOpen = props.isOpen;
   var onRequestClose = props.onRequestClose;
-  var isCenterMode = props.isCenterMode;
+  var mode = props.mode;
   var children = props.children;
 
   var className = 'z-modal';
-  if (isCenterMode) {
+  if (mode === 'center') {
     className += ' z-modal--center';
   }
   return isOpen && _react2.default.createElement(
@@ -41,14 +41,14 @@ var Model = function Model(props) {
 };
 
 Model.propTypes = {
-  isCenterMode: _react.PropTypes.bool,
+  mode: _react2.default.PropTypes.oneOf(['normal', 'center']),
   isOpen: _react.PropTypes.bool,
   children: _react.PropTypes.node,
   onRequestClose: _react.PropTypes.func
 };
 
 Model.defaultProps = {
-  isCenterMode: false,
+  mode: 'normal',
   isOpen: false
 };
 

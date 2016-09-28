@@ -22,18 +22,24 @@ var Button = function Button(props) {
   var text = props.text;
   var color = props.color;
   var width = props.width;
+  var style = props.style;
 
-  var others = _objectWithoutProperties(props, ['text', 'color', 'width']);
+  var others = _objectWithoutProperties(props, ['text', 'color', 'width', 'style']);
 
   var className = 'z-button';
   if (color === 'gray') {
     className += ' z-button--gray';
   }
+  style.width = width;
   return _react2.default.createElement(
     'button',
-    _extends({ style: { width: width }, className: className }, others),
+    _extends({ style: style, className: className }, others),
     text
   );
+};
+
+Button.defaultProps = {
+  style: {}
 };
 
 Button.propTypes = {
