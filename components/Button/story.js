@@ -15,3 +15,6 @@ storiesOf('Button', module)
   .add('With Listener', () => (
     <Button text="Add Listener" onClick={action('click')}/>
   ))
+  .add('Custom Style', () => (
+    <Button text="fontSize: 14px" style={{fontSize: 14}}/>
+  ))

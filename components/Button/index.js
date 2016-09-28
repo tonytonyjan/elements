@@ -5,12 +5,17 @@ if (typeof window !== 'undefined') {
 }
 
 const Button = props => {
-  const {text, color, width, ...others} = props
+  const {text, color, width, style, ...others} = props
   let className = 'z-button'
   if (color === 'gray') {
     className += ' z-button--gray'
   }
-  return <button style={{width}} className={className} {...others}>{text}</button>
+  style.width = width
+  return <button style={style} className={className} {...others}>{text}</button>
+}
+
+Button.defaultProps = {
+  style: {}
 }
 
 Button.propTypes = {
