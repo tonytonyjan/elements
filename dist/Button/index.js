@@ -45,7 +45,8 @@ Button.defaultProps = {
 Button.propTypes = {
   text: _react.PropTypes.string,
   color: _react.PropTypes.oneOf(['gray']),
-  width: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number])
+  width: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]),
+  style: _react.PropTypes.object
 };
 
 exports.default = Button;
