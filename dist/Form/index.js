@@ -31,8 +31,9 @@ function Form(props) {
   var tip = props.tip;
   var button = props.button;
   var footer = props.footer;
+  var error = props.error;
 
-  var others = _objectWithoutProperties(props, ['fields', 'tip', 'button', 'footer']);
+  var others = _objectWithoutProperties(props, ['fields', 'tip', 'button', 'footer', 'error']);
 
   return _react2.default.createElement(
     'form',
@@ -58,6 +59,11 @@ function Form(props) {
       { className: 'z-form__button' },
       button
     ),
+    error && _react2.default.createElement(
+      'div',
+      { className: 'z-form__error' },
+      error
+    ),
     _react2.default.createElement(
       'div',
       { className: 'z-form__footer' },
@@ -70,7 +76,8 @@ Form.propTypes = {
   fields: _react.PropTypes.arrayOf(_react.PropTypes.shape({ type: _react.PropTypes.oneOf([_TextField2.default]) })).isRequired,
   button: _react.PropTypes.shape({ type: _react.PropTypes.oneOf([_Button2.default]) }).isRequired,
   tip: _react.PropTypes.node,
-  footer: _react.PropTypes.node
+  footer: _react.PropTypes.node,
+  error: _react.PropTypes.node
 };
 
 exports.default = Form;
