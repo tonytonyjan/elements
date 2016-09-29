@@ -14,7 +14,8 @@ const form = (
     ]}
     tip={<div>By signing up, you agree to our <a href="http://blog.ziltag.com/terms" target="_blank" rel="noopener noreferrer">terms</a> and <a href="http://blog.ziltag.com/privacy/" target="_blank" rel="noopener noreferrer">privacy policy</a>.</div>}
     button={<Button width="100%" text="Submit"/>}
-    footer={<div>Already have an account? <a href="#">Sign In</a></div>}
+    footer={<div>ex: Already have an account? <a href="#">Sign In</a></div>}
+    error="error message"
     />
 )
 
@@ -22,6 +23,6 @@ storiesOf('Form', module)
   .add('Normal', () => (
     <div style={{width: 400}}>{form}</div>
   ))
-  .add('WithModal', () => (
+  .add('With Modal', () => (
     <Modal isOpen>{form}</Modal>
   ))
