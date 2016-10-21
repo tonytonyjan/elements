@@ -89,7 +89,8 @@ var FieldButton = function (_React$Component) {
           onFocus: this.handleFocus,
           onBlur: this.handleBlur,
           onKeyPress: this.handleKeyPress,
-          style: style
+          style: style,
+          required: true
         }, others)),
         _react2.default.createElement(_send3.default, { className: 'z-field-button__send', onMouseDown: this.handleMouseDown })
       );
