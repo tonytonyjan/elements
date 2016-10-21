@@ -54,8 +54,9 @@
   height: 0;
   transform: translate(0, -50%);
   transition-property: opacity, width, height;
-  transition-duration: 350ms;
-  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.175, 0.885 ,0.32, 1.275);
+  transition-delay: 10ms;
 }
 
 .z-field-button__input--focus + .z-field-button__send {
