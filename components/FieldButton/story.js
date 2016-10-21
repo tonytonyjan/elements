@@ -8,5 +8,6 @@ storiesOf('Field Button', module)
       buttonText="Preview on your website"
       placeholder="Please enter your website’s URL…"
       onRequestSend={action('onRequestSend')}
+      type="url"
       />
   ))

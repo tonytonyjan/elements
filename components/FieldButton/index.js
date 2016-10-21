@@ -59,6 +59,7 @@ class FieldButton extends React.Component {
           onBlur={this.handleBlur}
           onKeyPress={this.handleKeyPress}
           style={style}
+          required
           {...others}
           />
         <Send className="z-field-button__send" onMouseDown={this.handleMouseDown}/>
