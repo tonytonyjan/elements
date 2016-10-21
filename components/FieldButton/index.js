@@ -28,7 +28,9 @@ class FieldButton extends React.Component {
 
   render() {
     const {
-      buttonText, placeholder
+      buttonText, placeholder,
+      onRequestSend, // eslint-disable-line no-unused-vars
+      ...others
     } = this.props
     let className = 'z-field-button__input'
     if (this.state.mode === 'field') {
@@ -57,6 +59,7 @@ class FieldButton extends React.Component {
           onBlur={this.handleBlur}
           onKeyPress={this.handleKeyPress}
           style={style}
+          {...others}
           />
         <Send className="z-field-button__send" onMouseDown={this.handleMouseDown}/>
       </div>
