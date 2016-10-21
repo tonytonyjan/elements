@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -15,6 +17,8 @@ var _send2 = require('react-icons/lib/md/send');
 var _send3 = _interopRequireDefault(_send2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -54,6 +58,9 @@ var FieldButton = function (_React$Component) {
       var _props = this.props;
       var buttonText = _props.buttonText;
       var placeholder = _props.placeholder;
+      var onRequestSend = _props.onRequestSend;
+
+      var others = _objectWithoutProperties(_props, ['buttonText', 'placeholder', 'onRequestSend']);
 
       var className = 'z-field-button__input';
       if (this.state.mode === 'field') {
@@ -72,7 +79,7 @@ var FieldButton = function (_React$Component) {
           size: placeholder.length,
           style: { visibility: 'hidden', position: 'absolute' }
         }),
-        _react2.default.createElement('input', {
+        _react2.default.createElement('input', _extends({
           ref: function ref(c) {
             self._input = c;
           },
@@ -83,7 +90,7 @@ var FieldButton = function (_React$Component) {
           onBlur: this.handleBlur,
           onKeyPress: this.handleKeyPress,
           style: style
-        }),
+        }, others)),
         _react2.default.createElement(_send3.default, { className: 'z-field-button__send', onMouseDown: this.handleMouseDown })
       );
     }
