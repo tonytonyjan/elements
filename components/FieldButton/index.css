@@ -38,7 +38,7 @@
 }
 
 .z-field-button__input--focus:hover {
-  background-color: inherit;
+  background-color: white;
 }
 
 .z-field-button__input--focus::placeholder {
