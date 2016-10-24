@@ -47,38 +47,27 @@ var FieldButton = function (_React$Component) {
   }
 
   _createClass(FieldButton, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this._inputWidth = parseInt(window.getComputedStyle(this._input).width, 10);
-      this._extendedInputWidth = parseInt(window.getComputedStyle(this._extendedInput).width, 10);
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _props = this.props;
       var buttonText = _props.buttonText;
       var placeholder = _props.placeholder;
+      var defaultWidth = _props.defaultWidth;
+      var extendedWidth = _props.extendedWidth;
       var onRequestSend = _props.onRequestSend;
 
-      var others = _objectWithoutProperties(_props, ['buttonText', 'placeholder', 'onRequestSend']);
+      var others = _objectWithoutProperties(_props, ['buttonText', 'placeholder', 'defaultWidth', 'extendedWidth', 'onRequestSend']);
 
       var className = 'z-field-button__input';
       if (this.state.mode === 'field') {
         className += ' z-field-button__input--focus';
       }
-      var width = this.state.mode === 'field' ? this._extendedInputWidth + 100 : this._inputWidth;
+      var width = this.state.mode === 'field' ? extendedWidth : defaultWidth;
       var style = { width: width };
       var self = this;
       return _react2.default.createElement(
         'div',
         { className: 'z-field-button' },
-        _react2.default.createElement('input', {
-          ref: function ref(c) {
-            self._extendedInput = c;
-          },
-          size: placeholder.length,
-          style: { visibility: 'hidden', position: 'absolute' }
-        }),
         _react2.default.createElement('input', _extends({
           ref: function ref(c) {
             self._input = c;
@@ -126,6 +115,12 @@ var FieldButton = function (_React$Component) {
 FieldButton.propTypes = {
   buttonText: _react.PropTypes.string.isRequired,
   placeholder: _react.PropTypes.string.isRequired,
+  defaultWidth: _react.PropTypes.number.isRequired,
+  extendedWidth: _react.PropTypes.number.isRequired,
   onRequestSend: _react.PropTypes.func
+};
+FieldButton.defaultProps = {
+  defaultWidth: 210,
+  extendedWidth: 350
 };
 exports.default = FieldButton;
