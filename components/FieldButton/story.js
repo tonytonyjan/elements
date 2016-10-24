@@ -8,6 +8,12 @@ storiesOf('Field Button', module)
       buttonText="Preview on your website"
       placeholder="Please enter your website’s URL…"
       onRequestSend={action('onRequestSend')}
-      type="url"
+      />
+  ))
+  .add('中文測試', () => (
+    <FieldButton
+      buttonText="體驗你的網站"
+      placeholder="請輸入你的網站的網址⋯⋯"
+      onRequestSend={action('onRequestSend')}
       />
   ))

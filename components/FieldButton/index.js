@@ -9,7 +9,14 @@ class FieldButton extends React.Component {
   static propTypes = {
     buttonText: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
+    defaultWidth: PropTypes.number.isRequired,
+    extendedWidth: PropTypes.number.isRequired,
     onRequestSend: PropTypes.func
+  }
+
+  static defaultProps = {
+    defaultWidth: 210,
+    extendedWidth: 350
   }
 
   constructor(props) {
@@ -21,14 +28,9 @@ class FieldButton extends React.Component {
     this.handleMouseDown = this._send.bind(this)
   }
 
-  componentDidMount() {
-    this._inputWidth = parseInt(window.getComputedStyle(this._input).width, 10)
-    this._extendedInputWidth = parseInt(window.getComputedStyle(this._extendedInput).width, 10)
-  }
-
   render() {
     const {
-      buttonText, placeholder,
+      buttonText, placeholder, defaultWidth, extendedWidth,
       onRequestSend, // eslint-disable-line no-unused-vars
       ...others
     } = this.props
@@ -36,18 +38,11 @@ class FieldButton extends React.Component {
     if (this.state.mode === 'field') {
       className += ' z-field-button__input--focus'
     }
-    const width = this.state.mode === 'field' ? this._extendedInputWidth + 100 : this._inputWidth
+    const width = this.state.mode === 'field' ? extendedWidth : defaultWidth
     const style = {width}
     const self = this
     return (
       <div className="z-field-button">
-        <input
-          ref={function (c) {
-            self._extendedInput = c
-          }}
-          size={placeholder.length}
-          style={{visibility: 'hidden', position: 'absolute'}}
-          />
         <input
           ref={function (c) {
             self._input = c
