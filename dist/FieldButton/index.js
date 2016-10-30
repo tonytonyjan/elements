@@ -74,7 +74,7 @@ var FieldButton = function (_React$Component) {
           },
           size: buttonText.length,
           className: className,
-          placeholder: this.state.focus ? placeholder : buttonText,
+          placeholder: this.state.mode === 'field' ? placeholder : buttonText,
           onFocus: this.handleFocus,
           onBlur: this.handleBlur,
           onKeyPress: this.handleKeyPress,
