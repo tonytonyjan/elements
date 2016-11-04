@@ -27,17 +27,23 @@ if (typeof window !== 'undefined') {
 }
 
 function Form(props) {
+  var title = props.title;
   var fields = props.fields;
   var tip = props.tip;
   var button = props.button;
   var footer = props.footer;
   var error = props.error;
 
-  var others = _objectWithoutProperties(props, ['fields', 'tip', 'button', 'footer', 'error']);
+  var others = _objectWithoutProperties(props, ['title', 'fields', 'tip', 'button', 'footer', 'error']);
 
   return _react2.default.createElement(
     'form',
     _extends({ className: 'z-form' }, others),
+    _react2.default.createElement(
+      'div',
+      { className: 'z-form__title' },
+      title
+    ),
     _react2.default.createElement(
       'div',
       { className: 'z-form__fields' },
