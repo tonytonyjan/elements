@@ -23,6 +23,7 @@ function Form(props) {
 }
 
 Form.propTypes = {
+  title: PropTypes.string,
   fields: PropTypes.arrayOf(PropTypes.shape({type: PropTypes.oneOf([TextField])})).isRequired,
   button: PropTypes.shape({type: PropTypes.oneOf([Button])}).isRequired,
   tip: PropTypes.node,
