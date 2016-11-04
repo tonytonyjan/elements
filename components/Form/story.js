@@ -12,6 +12,7 @@ const form = (
       <TextField width="100%" placeholder="field 2"/>,
       <TextField width="100%" placeholder="field 3"/>
     ]}
+    title="Sign In"
     tip={<div>By signing up, you agree to our <a href="http://blog.ziltag.com/terms" target="_blank" rel="noopener noreferrer">terms</a> and <a href="http://blog.ziltag.com/privacy/" target="_blank" rel="noopener noreferrer">privacy policy</a>.</div>}
     button={<Button width="100%" text="Submit"/>}
     footer={<div>ex: Already have an account? <a href="#">Sign In</a></div>}

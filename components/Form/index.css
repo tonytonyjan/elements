@@ -3,6 +3,16 @@
   flex-direction: column;
 }
 
+.z-form__title {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 20px;
+  font-weight: 500;
+}
+
 .z-form__field:not(:first-child) {
   margin-top: 30px;
 }
@@ -37,4 +47,17 @@
 
 .z-form__footer a {
   color: inherit;
+}
+
+@media screen and (max-width: 621px) {
+  .z-form__title {
+    display: inherit;
+  }
+  .z-form__field:not(:first-child) {
+    margin-top: 36px;
+  }
+
+  .z-form__button {
+    margin-top: 55px;
+  }
 }

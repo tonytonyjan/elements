@@ -7,9 +7,10 @@ if (typeof window !== 'undefined') {
 }
 
 function Form(props) {
-  const {fields, tip, button, footer, error, ...others} = props
+  const {title, fields, tip, button, footer, error, ...others} = props
   return (
     <form className="z-form" {...others}>
+      <div className="z-form__title">{title}</div>
       <div className="z-form__fields">
         {fields.map((field, idx) => <div key={idx} className="z-form__field">{field}</div>)}
       </div>
