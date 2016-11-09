@@ -79,6 +79,7 @@ function Form(props) {
 }
 
 Form.propTypes = {
+  title: _react.PropTypes.string,
   fields: _react.PropTypes.arrayOf(_react.PropTypes.shape({ type: _react.PropTypes.oneOf([_TextField2.default]) })).isRequired,
   button: _react.PropTypes.shape({ type: _react.PropTypes.oneOf([_Button2.default]) }).isRequired,
   tip: _react.PropTypes.node,
