@@ -17,7 +17,7 @@
   max-height: 66vh;
   margin: 0 auto;
   top: 130px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .z-modal__close {
