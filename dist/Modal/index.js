@@ -23,6 +23,7 @@ var Model = function Model(props) {
   var onRequestClose = props.onRequestClose;
   var mode = props.mode;
   var children = props.children;
+  var showClose = props.showClose;
   var padding = props.padding;
 
   var bodyStyle = { padding: padding };
@@ -37,7 +38,7 @@ var Model = function Model(props) {
       'div',
       { className: 'z-modal__body', style: bodyStyle, onClick: stopPropagation },
       children,
-      onRequestClose && _react2.default.createElement(_close2.default, { className: 'z-modal__close', size: 40, onClick: onRequestClose })
+      showClose && _react2.default.createElement(_close2.default, { className: 'z-modal__close', size: 40, onClick: onRequestClose })
     )
   );
 };
@@ -51,7 +52,8 @@ Model.propTypes = {
 
 Model.defaultProps = {
   mode: 'normal',
-  isOpen: false
+  isOpen: false,
+  showClose: true
 };
 
 function stopPropagation(e) {
