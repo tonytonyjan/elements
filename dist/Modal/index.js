@@ -26,17 +26,20 @@ var Model = function Model(props) {
   var showClose = props.showClose;
   var padding = props.padding;
 
-  var bodyStyle = { padding: padding };
   var className = 'z-modal';
   if (mode === 'center') {
     className += ' z-modal--center';
+  }
+  var bodyClass = 'z-modal__body';
+  if (padding == 'small') {
+    bodyClass += ' z-modal__body--small';
   }
   return isOpen && _react2.default.createElement(
     'div',
     { className: className, onClick: onRequestClose },
     _react2.default.createElement(
       'div',
-      { className: 'z-modal__body', style: bodyStyle, onClick: stopPropagation },
+      { className: bodyClass, onClick: stopPropagation },
       children,
       showClose && _react2.default.createElement(_close2.default, { className: 'z-modal__close', size: 40, onClick: onRequestClose })
     )
