@@ -6,13 +6,13 @@ if (typeof window !== 'undefined') {
 }
 
 const Model = props => {
-  const {isOpen, onRequestClose, mode, children, showClose, padding, overlayClose} = props
+  const {isOpen, onRequestClose, mode, children, showClose, overlayClose, size} = props
   let className = 'z-modal'
   if (mode === 'center') {
     className += ' z-modal--center'
   }
   let bodyClass = 'z-modal__body'
-  if (padding === 'small') {
+  if (size === 'small') {
     bodyClass += ' z-modal__body--small'
   }
   return (

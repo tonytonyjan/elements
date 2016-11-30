@@ -21,9 +21,9 @@ storiesOf('Modal', module)
   .add('Hide Close Button', () => (
     <Modal isOpen showClose={false} onRequestClose={action('close')}><h1>Hide Close Button</h1></Modal>
   ))
-  .add('Small Padding', () => (
-    <Modal isOpen padding="small" onRequestClose={action('close')}><h1>Custom Padding</h1></Modal>
-  ))
   .add('Disable Overlay Close', () => (
     <Modal isOpen overlayClose={false} onRequestClose={action('close')}><h1>Disable Overlay Close</h1></Modal>
+  ))
+  .add('Small Size', () => (
+    <Modal isOpen size="small"><h1>Small Size</h1></Modal>
   ))
