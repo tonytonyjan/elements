@@ -18,3 +18,9 @@ storiesOf('Modal', module)
       <iframe width="100%" height="100%" style={{border: 'none'}} src="https://www.youtube-nocookie.com/embed/lPmIZy5B7-Y?rel=0&amp;showinfo=0" frameBorder="0" allowFullScreen/>
     </Modal>
   ))
+  .add('Hide Close Button', () => (
+    <Modal isOpen><h1>Hide Close Button</h1></Modal>
+  ))
+  .add('Custom Padding', () => (
+    <Modal isOpen padding="30px 20px 13px 20px"><h1>Custom Padding</h1></Modal>
+  ))
