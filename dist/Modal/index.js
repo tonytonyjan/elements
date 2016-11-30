@@ -24,15 +24,15 @@ var Model = function Model(props) {
   var mode = props.mode;
   var children = props.children;
   var showClose = props.showClose;
-  var padding = props.padding;
   var overlayClose = props.overlayClose;
+  var size = props.size;
 
   var className = 'z-modal';
   if (mode === 'center') {
     className += ' z-modal--center';
   }
   var bodyClass = 'z-modal__body';
-  if (padding === 'small') {
+  if (size === 'small') {
     bodyClass += ' z-modal__body--small';
   }
   return isOpen && _react2.default.createElement(

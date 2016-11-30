@@ -22,6 +22,7 @@
 
 .z-modal__body--small {
   padding: 30px 20px 13px 20px;
+  max-width: 350px;
 }
 
 .z-modal__close {
@@ -43,6 +44,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  .z-modal__body--small {
+    padding: inherit;
+    max-width: inherit;
   }
 }
 
@@ -70,5 +75,6 @@
     top: 10vh;
     left: inherit;
     right: inherit;
+    max-width: inherit;
   }
 }
