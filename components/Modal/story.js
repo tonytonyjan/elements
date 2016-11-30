@@ -22,5 +22,5 @@ storiesOf('Modal', module)
     <Modal isOpen><h1>Hide Close Button</h1></Modal>
   ))
   .add('Custom Padding', () => (
-    <Modal isOpen padding="30px 20px 13px 20px"><h1>Custom Padding</h1></Modal>
+    <Modal isOpen showClose={false} padding="30px 20px 13px 20px"><h1>Custom Padding</h1></Modal>
   ))

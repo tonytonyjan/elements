@@ -6,7 +6,7 @@ if (typeof window !== 'undefined') {
 }
 
 const Model = props => {
-  const {isOpen, onRequestClose, mode, children, padding} = props
+  const {isOpen, onRequestClose, mode, children, showClose, padding} = props
   const bodyStyle = {padding}
   let className = 'z-modal'
   if (mode === 'center') {
@@ -17,7 +17,7 @@ const Model = props => {
       <div className={className} onClick={onRequestClose}>
         <div className="z-modal__body" style={bodyStyle} onClick={stopPropagation}>
           {children}
-          {onRequestClose && <Close className="z-modal__close" size={40} onClick={onRequestClose}/>}
+          {showClose && <Close className="z-modal__close" size={40} onClick={onRequestClose}/>}
         </div>
       </div>
   )
@@ -32,7 +32,8 @@ Model.propTypes = {
 
 Model.defaultProps = {
   mode: 'normal',
-  isOpen: false
+  isOpen: false,
+  showClose: true
 }
 
 function stopPropagation(e) {
