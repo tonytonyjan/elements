@@ -7,15 +7,18 @@ if (typeof window !== 'undefined') {
 
 const Model = props => {
   const {isOpen, onRequestClose, mode, children, showClose, padding} = props
-  const bodyStyle = {padding}
   let className = 'z-modal'
   if (mode === 'center') {
     className += ' z-modal--center'
   }
+  let bodyClass = 'z-modal__body'
+  if (padding == 'small') {
+    bodyClass += ' z-modal__body--small'
+  }
   return (
     isOpen &&
       <div className={className} onClick={onRequestClose}>
-        <div className="z-modal__body" style={bodyStyle} onClick={stopPropagation}>
+        <div className={bodyClass} onClick={stopPropagation}>
           {children}
           {showClose && <Close className="z-modal__close" size={40} onClick={onRequestClose}/>}
         </div>
