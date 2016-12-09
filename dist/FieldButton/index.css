@@ -7,7 +7,7 @@
   cursor: pointer;
   text-align: center;
   background-color: #EE2E24;
-  padding: 16px 32px 16px 16px;
+  padding: 16px;
   font-size: 16px;
   font-weight: normal;
   letter-spacing: 0.12px;
@@ -40,6 +40,7 @@
   color: #333333;
   border-color: #C9C6C6;
   background-color: white;
+  padding-right: 32px;
 }
 
 .z-field-button__input--focus:hover {
