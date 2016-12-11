@@ -58,6 +58,7 @@
   top: 10vh;
   max-width: inherit;
   max-height: inherit;
+  -ms-overflow-y: hidden;
 }
 
 .z-modal--center .z-modal__close {
